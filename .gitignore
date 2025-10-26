@@ -1,0 +1,9 @@
+# Node.js ignores
+node_modules/
+
+# Common extras
+.env
+dist/
+npm-debug.log*
+yarn-error.log*
+.DS_Store
