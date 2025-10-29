@@ -4,25 +4,20 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nodemon ts-node app.ts",
-    "build": "tsc",
-    "start": "node dist/app.js",
-    "prod": "npm run build && npm start"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "^4.21.2",
+    "cookie-parser": "~1.4.7",
+    "debug": "4.4.3",
+    "dotenv": "^17.2.3",
+    "express": "5.1.0",
     "morgan": "^1.10.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
-    "@types/express": "^5.0.4",
     "eslint": "^9.38.0",
     "globals": "^16.4.0",
-    "jiti": "^2.6.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.2"
+    "nodemon": "^3.1.10"
   }
 }

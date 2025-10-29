@@ -3,6 +3,7 @@ node_modules/
 
 # Common extras
 .env
+.env.*.local
 dist/
 npm-debug.log*
 yarn-error.log*
