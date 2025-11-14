@@ -15,10 +15,15 @@ Based on JavaScript Mastery's backend course on YouTube
 3. Middleware
 
    - standard express middleware: json, urlencoded
-   - cookie parser
-   - custom: error.middleware.js, handles specific error codes/name
+   - dependencies: cookie parser
+   - error.middleware.js, handles specific error codes/name
+   - auth.middleware.js, sits between router requests to controllers for security, only users with valid bearer tokens can make authorized requests
+     - |    No bearer token     |      bearer token      |
+       | :--------------------: | :--------------------: |
+       | ![](/images/auth1.png) | ![](/images/auth2.png) |
 
 4. Controllers
 
    - auth.controller.js handles auth logic for sign up/in/out using JWT(JSON Web Tokens)
-   - ![HTTPie experimenting with auth POST request](httpie-signup.png)
+   - ![HTTPie experimenting with auth POST request](/images/httpie-signup.png)
+     -user.controller.js handles retrieval of user information

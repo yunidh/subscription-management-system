@@ -14,9 +14,9 @@ app.use(express.json()); //handles json data in request body
 app.use(express.urlencoded({ extended: true })); //handles urlencoded data in request body
 app.use(cookieParser()); //parses cookies from incoming requests
 
-app.use("/api/v1/auth/", authRouter);
-app.use("/api/v1/users/", userRouter);
-app.use("/api/v1/subscriptions/", subscriptionRouter);
+app.use("/api/auth/", authRouter);
+app.use("/api/users/", userRouter);
+app.use("/api/subscriptions/", subscriptionRouter);
 
 app.get("/", (req, res) => {
   res.send("welcome to tracker");
