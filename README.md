@@ -24,6 +24,8 @@ Based on JavaScript Mastery's backend course on YouTube
 
 4. Controllers
 
-   - auth.controller.js handles auth logic for sign up/in/out using JWT(JSON Web Tokens), img shows experimenting with auth POST request using HTTPie (API testing tool)
-   - ![HTTPie experimenting with auth POST request](/images/httpie-signup.png)
+   - auth.controller.js handles auth logic for sign up/in/out using JWT(JSON Web Tokens),
+     - | auth POST request using HTTPie (API testing tool) |
+       | :-----------------------------------------------: |
+       | <img src="images/httpie-signup.png" width="70%">  |
    - user.controller.js handles retrieval of user information
