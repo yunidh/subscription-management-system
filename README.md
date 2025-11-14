@@ -20,7 +20,7 @@ Based on JavaScript Mastery's backend course on YouTube
    - auth.middleware.js, sits between router requests to controllers for security, only users with valid bearer tokens can make authorized requests
      - |    No bearer token     |      bearer token      |
        | :--------------------: | :--------------------: |
-       | ![](/images/auth1.png) | ![](/images/auth2.png) |
+       | ![](/images/auth2.png) | ![](/images/auth1.png) |
 
 4. Controllers
 
