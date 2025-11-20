@@ -1,3 +1,19 @@
+/**
+ * Example JSON format for subscription data:
+ * {
+ *   "name": "Netflix Premium",
+ *   "price": 15.99,
+ *   "currency": "USD",
+ *   "frequency": "monthly",
+ *   "category": "entertainment",
+ *   "paymentMethod": "Credit Card",
+ *   "status": "active",
+ *   "startDate": "2024-01-01T00:00:00.000Z",
+ *   "renewalDate": "2024-02-01T00:00:00.000Z",
+ *   "user": "507f1f77bcf86cd799439011"
+ * }
+ */
+
 import mongoose from "mongoose";
 // Define the Subscription schema (data model)
 const subscriptionSchema = new mongoose.Schema(
@@ -22,6 +38,7 @@ const subscriptionSchema = new mongoose.Schema(
     frequency: {
       type: String,
       enum: ["weekly", "monthly", "yearly"],
+      default: "monthly",
     },
     category: {
       type: String,
@@ -82,3 +99,6 @@ subscriptionSchema.pre("save", function (next) {
   }
   next();
 });
+
+const Subscription = mongoose.model("Subscription", subscriptionSchema);
+export default Subscription;

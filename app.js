@@ -6,13 +6,15 @@ import subscriptionRouter from "./routes/subscription.routes.js";
 import connectToDatabase from "./database/mongodb.js";
 import errorMiddleware from "./middleware/error.middleware.js";
 import cookieParser from "cookie-parser";
-
+import arcjetMiddleware from "./middleware/arcjet.middleware.js";
 const app = express();
 
-app.use(errorMiddleware); //custom middleware
 app.use(express.json()); //handles json data in request body
 app.use(express.urlencoded({ extended: true })); //handles urlencoded data in request body
 app.use(cookieParser()); //parses cookies from incoming requests
+app.use(errorMiddleware); //custom middleware
+
+app.use(arcjetMiddleware); //for handling spam protection and bot detection
 
 app.use("/api/auth/", authRouter);
 app.use("/api/users/", userRouter);
